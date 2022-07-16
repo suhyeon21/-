@@ -1,20 +1,52 @@
 @charset "UTF-8";
-@import "reset.css";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
 
 /* header----------------------------- */
-
 #header {
   width: 100%;
   padding-bottom: 10px;
 }
-
 #header .inner {
   width: 1180px;
   height: 200px;
   margin: 0 auto;
   position: relative;
+  /* 햄버거 메뉴 버튼 ---- */
+  /*-------------- 모바일 메뉴-------------- */
 }
-
 #header .inner h1 {
   position: absolute;
   width: 100%;
@@ -46,15 +78,12 @@
   font: 14px/1 "arial";
   margin-bottom: 20px;
 }
-
 #header .inner #gnb li a {
   width: 100%;
   display: block;
-
   padding: 0 40px;
   color: #55585b;
 }
-
 #header .inner .util {
   position: absolute;
   top: 60px;
@@ -68,8 +97,6 @@
   color: #888888;
   font: 11px/1 "arial";
 }
-
-/* 햄버거 메뉴 버튼 ---- */
 #header .inner .btnCall {
   position: absolute;
   right: 30px;
@@ -111,7 +138,6 @@
   margin-top: -1px;
   text-indent: -9999px;
 }
-
 #header .inner .btnCall.on::before {
   top: 50%;
   margin-top: -1px;
@@ -126,8 +152,6 @@
   transform: translateX(100%);
   opacity: 0;
 }
-
-/*-------------- 모바일 메뉴-------------- */
 #header .inner .menuMo {
   width: 270px;
   height: 100vh;
@@ -139,16 +163,13 @@
   padding: 35px 30px;
   transition: 0.5s;
 }
-
 #header .inner .menuMo.on {
   left: 0;
 }
-
 #header .inner .menuMo h1 {
   border-bottom: 1px solid #666;
   padding-bottom: 30px;
 }
-
 #header .inner .menuMo h1 a {
   font: bold 24px/1 "arial";
   color: #fff;
@@ -159,7 +180,6 @@
   font-size: 12px;
   color: #aaa;
 }
-
 #header .inner .menuMo ul li a {
   display: block;
   padding: 20px 0;
@@ -168,8 +188,8 @@
   color: #888;
   text-align: center;
 }
-/* visual--------------------------*/
 
+/* visual--------------------------*/
 #visual {
   width: 100%;
   height: calc(100vh - 200px);
@@ -181,6 +201,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 /* lager--------------------- */
 #lager {
   width: 100%;
@@ -199,7 +220,6 @@
 #lager .inner .wrap {
   width: 100%;
 }
-
 #lager .inner .logo {
   width: 380px;
   margin: 0 auto;
@@ -216,7 +236,6 @@
   padding: 90px 0 70px 0;
   text-align: center;
 }
-
 #lager .inner .letter .left {
   display: inline-block;
   text-align: left;
@@ -227,17 +246,16 @@
 #lager .inner .letter p span {
   font: 18px;
 }
-
-#lager .inner .beer {
+#lager .beer {
   position: absolute;
   left: 200px;
 }
-#lager .inner .beer img {
+#lager .beer img {
   width: 200px;
   height: 250px;
 }
-/* wit----------------------------- */
 
+/* wit----------------------------- */
 #wit {
   width: 100%;
   padding: 200px 0;
@@ -255,7 +273,6 @@
 #wit .inner .wrap {
   width: 100%;
 }
-
 #wit .inner .logo {
   width: 380px;
   margin: 0 auto;
@@ -272,7 +289,6 @@
   padding: 90px 0 70px 0;
   text-align: center;
 }
-
 #wit .inner .letter .left {
   display: inline-block;
   text-align: left;
@@ -283,18 +299,16 @@
 #wit .inner .letter p span {
   font: 18px;
 }
-
-#wit .inner .beer {
+#wit .inner .letter .beer {
   position: absolute;
   left: 200px;
 }
-#wit .inner .beer img {
+#wit .inner .letter .beer img {
   width: 200px;
   height: 250px;
 }
 
 /* ------------wit--------------------- */
-
 #wit {
   width: 100%;
   padding: 200px 0;
@@ -323,16 +337,15 @@
   padding: 90px 0 70px 40px;
   text-align: center;
 }
-
 #wit .inner .letter .left {
   display: inline-block;
   text-align: left;
   padding-left: 60px;
 }
-#wit .inner .letter p {
+#wit .inner .letter .left p {
   line-height: 1.5;
 }
-#wit .inner .letter p span {
+#wit .inner .letter .left p span {
   font: 18px;
 }
 #wit .inner .beer {
@@ -345,7 +358,6 @@
 }
 
 /* ----------pellong------------ */
-
 #pellong {
   width: 100%;
   padding: 200px 0;
@@ -375,7 +387,6 @@
   text-align: center;
   padding: 90px 0 70px 200px;
 }
-
 #pellong .inner .letter .left {
   display: inline-block;
   text-align: left;
@@ -426,7 +437,6 @@
   text-align: center;
   padding: 100px 0 70px 110px;
 }
-
 #geomeong .inner .letter .left {
   display: inline-block;
   text-align: left;
@@ -460,7 +470,6 @@
   display: block;
   clear: both;
 }
-
 #footer .inner ul {
   float: left;
   margin-bottom: 50px;
@@ -479,7 +488,6 @@
   color: #999999;
   float: left;
 }
-
 #footer .inner .etc address {
   font: 11px/1 "arial";
   margin-bottom: 10px;
@@ -489,18 +497,15 @@
 }
 
 /* tablet ------------------------------------------------------------------------------------- */
-
 @media screen and (max-width: 1179px) {
   /* header ---------------------------------------------------- */
   #header .inner {
     width: 100%;
     height: 50px;
   }
-
   #header .inner h1 a .logo1 {
     display: none;
   }
-
   #header .inner h1 a .logo2 {
     display: inline-block;
     width: 90px;
@@ -509,11 +514,9 @@
   #header .inner .menuWeb {
     display: none;
   }
-
   #header .inner .menuMo.on {
     left: 0;
   }
-
   #header .inner .btnCall {
     width: 15px;
     height: 15px;
@@ -526,7 +529,6 @@
     background-size: cover;
     padding: 50px;
   }
-
   #lager .inner {
     width: 100%;
     height: 600px;
@@ -536,7 +538,6 @@
     justify-content: center;
     position: relative;
   }
-
   #lager .inner .logo {
     width: 100%;
     position: absolute;
@@ -567,16 +568,13 @@
     display: block;
     margin: 0 auto;
   }
-
   /* ------------wit--------------------- */
-
   #wit {
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
     padding: 50px;
   }
-
   #wit .inner {
     width: 100%;
     height: 550px;
@@ -585,7 +583,6 @@
     justify-content: center;
     position: relative;
   }
-
   #wit .inner .logo {
     width: 100%;
     position: absolute;
@@ -617,14 +614,12 @@
     margin: 0 auto;
   }
   /* ----------pellong------------ */
-
   #pellong {
     width: 100%;
     background-position: 50% 50%;
     background-size: cover;
     padding: 50px;
   }
-
   #pellong .inner {
     width: 100%;
     height: 550px;
@@ -633,7 +628,6 @@
     justify-content: center;
     position: relative;
   }
-
   #pellong .inner .logo {
     width: 100%;
     position: absolute;
@@ -655,7 +649,6 @@
   #pellong .inner .letter .left {
     text-align: center;
   }
-
   #pellong .inner .beer {
     width: 100%;
     position: absolute;
@@ -674,7 +667,6 @@
     background-size: cover;
     padding: 50px;
   }
-
   #geomeong .inner {
     width: 100%;
     height: 550px;
@@ -683,7 +675,6 @@
     justify-content: center;
     position: relative;
   }
-
   #geomeong .inner .logo {
     width: 100%;
     position: absolute;
@@ -702,11 +693,9 @@
     padding: 0;
     margin: 0 auto;
   }
-
   #geomeong .inner .letter .left {
     text-align: center;
   }
-
   #geomeong .inner .beer {
     width: 100%;
     position: absolute;
@@ -718,7 +707,6 @@
     display: block;
     margin: 0 auto;
   }
-
   /* footer --------------------------------------- */
   #footer {
     padding: 80px 30px;
@@ -727,8 +715,6 @@
     width: 100%;
   }
 }
-
 /* mobile ------------------------------------------------------------------------------------- */
 
-@media screen and (max-width: 539px) {
-}
+/*# sourceMappingURL=style.css.map */
