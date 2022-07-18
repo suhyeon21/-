@@ -1,0 +1,243 @@
+//swiper
+
+.news {
+  .sub_visual {
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin: 100px auto;
+      position: relative;
+
+      .box1 {
+        width: 300px;
+        height: 300px;
+        background-color: #333;
+        background-size: cover;
+      }
+      .box2 {
+        background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-3.png");
+        background-size: cover;
+      }
+      .box3 {
+        background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-2.png");
+        background-size: cover;
+      }
+      .box4 {
+        background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-1.png");
+        background-size: cover;
+      }
+      .box5 {
+        background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-5.png");
+        background-size: cover;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.inner {
+  width: 80%;
+  h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(30, 202, 211);
+    font: 48px/1 "anton";
+  }
+  span {
+    display: block;
+    margin-bottom: 50px;
+    font-size: 12px;
+    text-align: center;
+  }
+  table {
+    width: 60%;
+    border-bottom: 1px solid #3d464b;
+    border-top: 1px solid #3d464b;
+    margin: 0 auto;
+    font-size: 14px;
+
+    tr {
+      th {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+
+        &:nth-of-type(1) {
+          width: 80%;
+        }
+        &:nth-of-type(2) {
+          width: 20%;
+        }
+      }
+      td {
+        padding: 13px;
+        border-bottom: 1px solid #ddd;
+
+        &:nth-of-type(1) {
+          text-align: left;
+        }
+        &:nth-of-type(2) {
+          text-align: right;
+          padding-right: 45px;
+          font-size: 12px;
+        }
+
+        a {
+          color: #333;
+          font-family: "arial";
+        }
+      }
+    }
+  }
+
+  .pagination {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+
+    .prev {
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      text-align: center;
+      float: left;
+      position: absolute;
+      left: 200px;
+
+      i {
+        width: 100%;
+        height: 100%;
+        color: #ddd;
+      }
+    }
+    .next {
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      text-align: center;
+      float: right;
+      position: absolute;
+      right: 200px;
+
+      i {
+        width: 100%;
+        height: 100%;
+        color: #ddd;
+      }
+    }
+
+    .numbers {
+      display: inline-block;
+      font-size: 0;
+
+      a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        font: 11px/30px "arial";
+        color: #666;
+        margin: 0 5px;
+        transition: 0.5s;
+
+        &:hover {
+          background: #666;
+          color: #fff;
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .community {
+    .inner {
+      table {
+        tr {
+          th {
+            &:nth-of-type(1) {
+              width: 14%;
+            }
+            &:nth-of-type(3) {
+              width: 17%;
+            }
+            &:nth-of-type(4) {
+              width: 0%;
+              display: none;
+            }
+          }
+          td {
+            &:nth-of-type(4) {
+              width: 0%;
+              display: none;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        .numbers {
+          a {
+            &:nth-of-type(6) {
+              display: none;
+            }
+            &:nth-of-type(7) {
+              display: none;
+            }
+            &:nth-of-type(8) {
+              display: none;
+            }
+            &:nth-of-type(9) {
+              display: none;
+            }
+            &:nth-of-type(10) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .community {
+    .inner {
+      table {
+        tr {
+          th {
+            &:nth-of-type(1) {
+              width: 0%;
+              display: none;
+            }
+            &:nth-of-type(3) {
+              width: 29%;
+            }
+          }
+          td {
+            &:nth-of-type(1) {
+              width: 0%;
+              display: none;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        .numbers {
+          display: none;
+        }
+      }
+    }
+  }
+}

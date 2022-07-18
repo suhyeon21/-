@@ -7,3 +7,9 @@ btnCall.onclick = function (e) {
   btnCall.classList.toggle("on");
   menuMo.classList.toggle("on");
 };
+
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
