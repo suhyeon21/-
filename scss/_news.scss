@@ -4,10 +4,27 @@
   .sub_visual {
     .swiper {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       margin: 100px auto;
       position: relative;
-
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
       .box1 {
         width: 300px;
         height: 300px;
@@ -25,16 +42,6 @@
       .box4 {
         background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-1.png");
         background-size: cover;
-      }
-      .box5 {
-        background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-5.png");
-        background-size: cover;
-      }
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
     }
   }
