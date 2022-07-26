@@ -3,6 +3,10 @@ const btnSubmit = form.querySelector("input[type=submit]");
 
 btnSubmit.addEventListener("click", (e) => {
   if (!isTxt("id", 5)) e.preventDefault(); //id
+
+  if (!isCheck("gender")) e.preventDefault();
+
+  if (!isPwd("pwd1", "pwd2", 5)) e.preventDefault();
 });
 
 function isTxt(name, len) {
