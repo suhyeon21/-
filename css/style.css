@@ -293,64 +293,104 @@ table {
   }
 }
 /* mobile ------------------------------------------------------------------------------------- */
-.news .sub_visual {
-  background: url(../img/brand3.jpg) no-repeat center/cover;
+.news .sub_visual .swiper {
+  width: 100%;
+  height: 100vh;
+  margin: 100px auto;
+  position: relative;
 }
-.news .inner {
+.news .sub_visual .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.news .sub_visual .swiper .box1 {
+  width: 300px;
+  height: 300px;
+  background-color: #333;
+  background-size: cover;
+}
+.news .sub_visual .swiper .box2 {
+  background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-3.png");
+  background-size: cover;
+}
+.news .sub_visual .swiper .box3 {
+  background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-2.png");
+  background-size: cover;
+}
+.news .sub_visual .swiper .box4 {
+  background-image: url("https://www.kakaobank.com/static/images/web/renewal/card-1.png");
+  background-size: cover;
+}
+
+.inner {
   width: 80%;
 }
-.news .inner h1 {
+.inner h1 {
   margin-bottom: 10px;
   text-align: center;
   color: rgb(30, 202, 211);
   font: 48px/1 "anton";
 }
-.news .inner span {
+.inner span {
   display: block;
   margin-bottom: 50px;
   font-size: 12px;
   text-align: center;
 }
-.news .inner table {
-  width: 80%;
+.inner table {
+  width: 60%;
   border-bottom: 1px solid #3d464b;
   border-top: 1px solid #3d464b;
   margin: 0 auto;
   font-size: 14px;
 }
-.news .inner table tr th {
+.inner table tr th {
   padding: 15px;
   border-bottom: 1px solid #ddd;
 }
-.news .inner table tr th:nth-of-type(1) {
+.inner table tr th:nth-of-type(1) {
   width: 80%;
 }
-.news .inner table tr th:nth-of-type(2) {
+.inner table tr th:nth-of-type(2) {
   width: 20%;
 }
-.news .inner table tr td {
+.inner table tr td {
   padding: 13px;
   border-bottom: 1px solid #ddd;
 }
-.news .inner table tr td:nth-of-type(1) {
+.inner table tr td:nth-of-type(1) {
   text-align: left;
 }
-.news .inner table tr td:nth-of-type(2) {
+.inner table tr td:nth-of-type(2) {
   text-align: right;
   padding-right: 45px;
   font-size: 12px;
 }
-.news .inner table tr td a {
+.inner table tr td a {
   color: #333;
   font-family: "arial";
 }
-.news .inner .pagination {
+.inner .pagination {
   width: 100%;
   text-align: center;
   margin-top: 50px;
   position: relative;
 }
-.news .inner .pagination .prev {
+.inner .pagination .prev {
   width: 30px;
   height: 30px;
   font-size: 20px;
@@ -359,12 +399,12 @@ table {
   position: absolute;
   left: 200px;
 }
-.news .inner .pagination .prev i {
+.inner .pagination .prev i {
   width: 100%;
   height: 100%;
   color: #ddd;
 }
-.news .inner .pagination .next {
+.inner .pagination .next {
   width: 30px;
   height: 30px;
   font-size: 20px;
@@ -373,16 +413,16 @@ table {
   position: absolute;
   right: 200px;
 }
-.news .inner .pagination .next i {
+.inner .pagination .next i {
   width: 100%;
   height: 100%;
   color: #ddd;
 }
-.news .inner .pagination .numbers {
+.inner .pagination .numbers {
   display: inline-block;
   font-size: 0;
 }
-.news .inner .pagination .numbers a {
+.inner .pagination .numbers a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -391,11 +431,11 @@ table {
   margin: 0 5px;
   transition: 0.5s;
 }
-.news .inner .pagination .numbers a:hover {
+.inner .pagination .numbers a:hover {
   background: #666;
   color: #fff;
 }
-.news .inner .pagination::after {
+.inner .pagination::after {
   content: "";
   display: block;
   clear: both;
@@ -446,6 +486,85 @@ table {
   }
   .community .inner .pagination .numbers {
     display: none;
+  }
+}
+.join .inner {
+  margin-top: 100px;
+}
+.join .inner table {
+  width: 70%;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
+}
+.join .inner table th {
+  width: 20%;
+  text-align: left;
+  font: bold 14px/1 "arial";
+  color: #666;
+  padding: 20px 30px;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background: #eee;
+}
+.join .inner table th:last-child {
+  text-align: center;
+  border-right: none;
+  background: #fff;
+  font-size: 0;
+}
+.join .inner table th input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  background: #444;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  margin: 0 10px;
+}
+.join .inner table td {
+  width: 80%;
+  border-bottom: 1px solid #bbb;
+  padding: 20px 30px;
+}
+.join .inner table td [type=text],
+.join .inner table td [type=password],
+.join .inner table td [type=email] {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #bbb;
+  background: #eeffff;
+  padding-left: 10px;
+}
+.join .inner table td label {
+  margin-right: 10px;
+}
+.join .inner table td .genderTxt {
+  font: 12px/1 "arial";
+  color: hotpink;
+  margin-bottom: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 1179px) {
+  .join .inner table th {
+    width: 0%;
+    display: none;
+  }
+  .join .inner table th:last-child {
+    width: 100%;
+    display: block;
+  }
+  .join .inner table td .genderTxt {
+    display: block;
+  }
+}
+@media screen and (max-width: 539px) {
+  .join .inner table th input {
+    width: 40%;
+    margin: 0 5%;
+  }
+  .join .inner table td label {
+    display: block;
   }
 }
 /* header----------------------------- */

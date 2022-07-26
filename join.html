@@ -7,6 +7,7 @@
     <title>제주맥주</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
+    <script src="js/form_validation.js" defer></script>
   </head>
   <body>
     <header id="header_sub">
@@ -66,11 +67,97 @@
       </div>
     </header>
 
-    <section class="content">
-      <div class="sub_visual"></div>
+    <section class="content join">
       <div class="inner">
-        <h1>Sub Title <span>서브페이지제목</span></h1>
-        <!-- 컨텐츠 들어가는 부분 -->
+        <h1>JOIN</h1>
+        <form action="result.html" method="get" id="member">
+          <fieldset>
+            <table>
+              <caption class="hidden">
+                회원정보 입력양식테이블
+              </caption>
+
+              <tr>
+                <th scope="row"><label for="id">USER ID</label></th>
+                <td>
+                  <input
+                    type="text"
+                    id="id"
+                    name="id"
+                    placeholder="아이디를 입력해 주세요."
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><label for="pwd1">PASSWORD</label></th>
+                <td>
+                  <input
+                    type="password"
+                    name="pwd1"
+                    id="pwd1"
+                    placeholder="비밀번호를 입력해 주세요."
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="pwd2">RE PASSWORD</label>
+                </th>
+                <td>
+                  <input
+                    type="password"
+                    name="pwd2"
+                    id="pwd2"
+                    placeholder="비밀번호를 재입력 해 주세요."
+                    required
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row">GENDER</th>
+                <td>
+                  <p class="genderTxt">성별을 선택해 주세요.</p>
+                  <label for="male">
+                    <input type="radio" name="gender" id="male" value="male" />
+                    MALE
+                  </label>
+                  <label for="female">
+                    <input
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      value="female"
+                    />
+                    FEMALE
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="email">E-MAIL</label>
+                </th>
+                <td>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="이메일을 입력해 주세요."
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="2">
+                  <input type="reset" value="CANCEL" />
+                  <input type="submit" value="SUBMIT" />
+                </th>
+              </tr>
+            </table>
+          </fieldset>
+        </form>
       </div>
     </section>
 
