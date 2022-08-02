@@ -7,6 +7,8 @@ $mobile: 539px;
 @import "sub_layout.scss";
 @import "news.scss";
 @import "join.scss";
+@import "youtube.scss";
+@import "contact.scss";
 /* header----------------------------- */
 #header {
   width: 100%;
@@ -480,6 +482,64 @@ $mobile: 539px;
         width: 200px;
         height: 250px;
       }
+    }
+  }
+}
+
+#banner {
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+
+  .list {
+    li {
+      width: 240px;
+      float: left;
+      opacity: 0.3;
+      transition: 0.5s;
+      font-size: 0;
+
+      a {
+        img {
+          width: 100%;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .prev {
+    position: absolute;
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .next {
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  //배너에 호버했을 때
+  &:hover {
+    .prev {
+      left: 20px;
+      opacity: 1;
+    }
+    .next {
+      right: 20px;
+      opacity: 1;
     }
   }
 }

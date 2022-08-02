@@ -1,0 +1,147 @@
+@charset "utf-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 200px 0;
+
+  &:nth-of-type(1) {
+    background: pink;
+  }
+  &:nth-of-type(2) {
+    background: lightblue;
+    .svgBox {
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      border: 1px solid red;
+      svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+          fill: transparent;
+          stroke: blue;
+          stroke-dasharray: 1666;
+          stroke-dashoffset: 1666;
+          transition: 2s;
+          animation: ani linear 2s 1;
+          animation-play-state: paused;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+    &.on {
+      .svgBox {
+        svg path {
+          animation-play-state: running;
+        }
+      }
+    }
+  }
+
+  @keyframes ani {
+    0% {
+      stroke-dashoffset: 1666;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  &:nth-of-type(3) {
+    background: orange;
+    padding: 200px 0;
+
+    .inner {
+      width: 1180px;
+      margin: 0 auto;
+
+      h1 {
+        font: bold 24px/1 "arial";
+        color: #555;
+        margin-bottom: 100px;
+        text-align: center;
+      }
+      .wrap {
+        width: 100%;
+
+        article {
+          float: left;
+          width: 280px;
+          height: 300px;
+          background: #555;
+          margin-right: 20px;
+          opacity: 0;
+          transform: translateY(100px);
+          transition: 0.5s;
+
+          &:nth-of-type(1) {
+            transition-delay: 0;
+          }
+          &:nth-of-type(2) {
+            transition-delay: 0.3s;
+          }
+          &:nth-of-type(3) {
+            transition-delay: 0.6s;
+          }
+          &:last-child {
+            margin-right: 0;
+            transition-delay: 0.9s;
+          }
+        }
+      }
+    }
+
+    &.on {
+      .inner {
+        .wrap {
+          article {
+            opacity: 1;
+            transform: translateY(0);
+            background: #111;
+          }
+        }
+      }
+    }
+  }
+  &:nth-of-type(4) {
+    background: lightgreen;
+  }
+}
+
+ul {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+
+  li {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &.on {
+      background: #000;
+      height: 100px;
+    }
+  }
+}
